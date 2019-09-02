@@ -3,8 +3,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid = "JOAM";
-const char* password = "juanantonio1965";
+const char* ssid = "";
+const char* password = "";
 
 void setup() {
   
@@ -52,7 +52,7 @@ void loop() {
         if ((WiFi.status() == WL_CONNECTED)) { //Check the current connection status 
       HTTPClient http;
    
-      http.begin("http://jsonplaceholder.typicode.com/posts"); //Specify the URL
+      http.begin("http://jaimesarrion.freemyip.com:10000/mediciones"); //Specify the URL
       http.addHeader("Content-Type", "text/plain");
       int httpResponse = http.POST(packet);     //Make the request
    
